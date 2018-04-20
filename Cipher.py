@@ -2,10 +2,6 @@ letters = ["a", "b", "c", "d", "e", "f",
            "g", "h", "i", "j", "k", "l", "m",
            "n", "o", "p", "q", "r", "s", "t",
            "u", "v", "w", "x", "y", "z"]
-# To Do:
-# add a secret key to cypher many times
-# clean up code
-# improve UI and UX
 
 def main():
     while True:
@@ -39,7 +35,10 @@ def cipher(word):
         for a in range(len(letters)):
             if word[i] == letters[a]:
                 change = a + 3
+                #25 because index starts at 0
                 if change > 25:
+                    #subtract 26 to account for index starting at 0
+                    #Index of 'z' is 25, 25+3=28, 28-26=2, index 2 of letters is 'b'
                     change = change - 26
                 ans += letters[change]
     return ans
