@@ -40,7 +40,7 @@ def cipher(word):
                 if change > 25:
                     #subtract 26 to account for index starting at 0
                     #Index of 'z' is 25, 25+3=28, 28-26=2, index 2 of letters is 'b'
-                    change = change - 26
+                    change -= 26
                 ans += letters[change]
     return ans
 
@@ -55,7 +55,7 @@ def decode(word):
             if word[i] == letters[j]:
                 change = j - 3
                 if change < 0:
-                    change = change + 26
+                    change += 26
                 ans += letters[change]
     return ans
 
