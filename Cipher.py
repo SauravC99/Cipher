@@ -54,7 +54,10 @@ def decode(word):
         for j in range(len(letters)):
             if word[i] == letters[j]:
                 change = j - 3
+                #0 because thats the start
                 if change < 0:
+                    #add 26 if change goes negative to go back to right letter
+                    #Index of 'a' is 0, 0-3= -3, -3+26=23, index 23 of letters is 'x'
                     change += 26
                 ans += letters[change]
     return ans
