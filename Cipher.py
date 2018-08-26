@@ -47,7 +47,11 @@ def cipher(word):
 def decode(word):
     word = word.lower()
     ans = ""
-    for i in range(0, len(word)):
+    for i in range(len(word)):
+        if word[i] == " ":
+            ans += " "
+            continue
+        
         if word[i] == l0:
             ans += l0
         if word[i] == l1:
