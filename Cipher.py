@@ -33,9 +33,9 @@ def cipher(word):
         if word[i] == " ":
             ans += " "
             continue
-        for a in range(len(letters)):
-            if word[i] == letters[a]:
-                change = a + 3
+        for j in range(len(letters)):
+            if word[i] == letters[j]:
+                change = j + 3
                 #25 because index starts at 0
                 if change > 25:
                     #subtract 26 to account for index starting at 0
@@ -51,9 +51,9 @@ def decode(word):
         if word[i] == " ":
             ans += " "
             continue
-        for a in range(len(letters)):
-            if word[i] == letters[a]:
-                change = a - 3
+        for j in range(len(letters)):
+            if word[i] == letters[j]:
+                change = j - 3
                 if change < 0:
                     change = change + 26
                 ans += letters[change]
