@@ -9,6 +9,7 @@ def main():
         word = input()
         
         if word.lower() == "q":
+            print("Good Bye")
             break
                 
         if word.lower() == "d":
