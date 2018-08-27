@@ -1,10 +1,15 @@
 # Saurav Chhapawala #
 #       2018        #
 
+#TODO make offset function do something
+
 letters = ["a", "b", "c", "d", "e", "f",
            "g", "h", "i", "j", "k", "l", "m",
            "n", "o", "p", "q", "r", "s", "t",
            "u", "v", "w", "x", "y", "z"]
+
+global offset
+offset = 3
 
 def main():
     while True:
@@ -26,6 +31,12 @@ def main():
             secret = cipher(input())
             print(secret)
             print("")
+
+        if word.lower() == "o":
+            print("Offset by how much? (Default 3)")
+            changeOffset(input())
+            print(offset)
+
 
 def menu():
     print("What would you like to do?")
@@ -70,5 +81,9 @@ def decode(word):
                     change += 26
                 ans += letters[change]
     return ans
+
+def changeOffset(set):
+    global offset
+    offset = int(set)
 
 main()
