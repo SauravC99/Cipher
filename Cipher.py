@@ -1,5 +1,5 @@
-#Saurav Chhapawala#
-#      2018       #
+# Saurav Chhapawala #
+#       2018        #
 
 letters = ["a", "b", "c", "d", "e", "f",
            "g", "h", "i", "j", "k", "l", "m",
@@ -39,7 +39,7 @@ def cipher(word):
     word = word.lower()
     ans = ""
     for i in range(len(word)):
-        if word[i] == " ":
+        if word[i] not in letters:
             ans += " "
             continue
         for j in range(len(letters)):
@@ -57,7 +57,7 @@ def decode(word):
     word = word.lower()
     ans = ""
     for i in range(len(word)):
-        if word[i] == " ":
+        if word[i] not in letters:
             ans += " "
             continue
         for j in range(len(letters)):
