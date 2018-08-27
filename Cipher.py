@@ -5,7 +5,7 @@ letters = ["a", "b", "c", "d", "e", "f",
 
 def main():
     while True:
-        print("Decode or Cipher? (D/C) enter 'q' to quit")
+        menu()
         word = input()
         
         if word.lower() == "q":
@@ -25,7 +25,15 @@ def main():
             ciphered = cipher(secret)
             print(ciphered)
             print("")
-        
+
+def menu():
+    print("What would you like to do?")
+    print("Decode (D)")
+    print("Cipher (C)")
+    print("Change Offset (O)")
+    print("Quit (Q)")
+    print("")
+
 def cipher(word):
     word = word.lower()
     ans = ""
@@ -39,7 +47,7 @@ def cipher(word):
                 #25 because index starts at 0
                 if change > 25:
                     #subtract 26 to account for index starting at 0
-                    #Index of 'z' is 25, 25+3=28, 28-26=2, index 2 of letters is 'b'
+                    #Index of 'z' is 25, 25+3=28, 28-26= 2, index 2 of letters is 'b'
                     change -= 26
                 ans += letters[change]
     return ans
