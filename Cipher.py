@@ -1,3 +1,6 @@
+#Saurav Chhapawala#
+#      2018       #
+
 letters = ["a", "b", "c", "d", "e", "f",
            "g", "h", "i", "j", "k", "l", "m",
            "n", "o", "p", "q", "r", "s", "t",
@@ -14,16 +17,14 @@ def main():
                 
         if word.lower() == "d":
             print("What do you want to decode?")
-            dec = input()
-            decoded = decode(dec)
+            decoded = decode(input())
             print(decoded)
             print("")
         
         if word.lower() == "c":
             print("What do you want to cypher?")
-            secret = input()
-            ciphered = cipher(secret)
-            print(ciphered)
+            secret = cipher(input())
+            print(secret)
             print("")
 
 def menu():
